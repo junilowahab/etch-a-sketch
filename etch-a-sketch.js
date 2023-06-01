@@ -8,7 +8,14 @@ function createGrid(gridSize){
         container.appendChild(grid);
         grid.style.height = `calc(500px/${gridSize})`;
         grid.style.width = `calc(500px/${gridSize})`;
+        
+        //Make grid boxes change color when hovered
+        grid.addEventListener('mouseover',() => {
+            console.log('hovered')
+            grid.style.backgroundColor = 'red';
+        }) 
+        
     }   
 }
 
-createGrid(10);
+createGrid(100);
