@@ -13,9 +13,8 @@ function createGrid(gridSize){
         grid.addEventListener('mouseover',() => {
             console.log('hovered')
             grid.style.backgroundColor = 'red';
-        }) 
-        
+        }); 
     }   
 }
 
-createGrid(100);
+createGrid(prompt('Grid Number'));
