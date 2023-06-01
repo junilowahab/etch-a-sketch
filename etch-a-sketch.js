@@ -1,4 +1,5 @@
 let container = document.querySelector('.container');
+let promptButton = document.querySelector('#prompt_button');
 
 //Create a series of squares to form grid
 function createGrid(gridSize){
@@ -17,4 +18,7 @@ function createGrid(gridSize){
     }   
 }
 
-createGrid(prompt('Grid Number'));
+//Prompt appears when button is clicked
+promptButton.addEventListener('click', () => {
+    createGrid(prompt('Grid Number'));
+})
