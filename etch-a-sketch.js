@@ -9,11 +9,16 @@ function createGrid(gridSize){
         container.appendChild(grid);
         grid.style.height = `calc(500px/${gridSize})`;
         grid.style.width = `calc(500px/${gridSize})`;
+
+        //random values for RGB
+        let randomR = Math.floor(Math.random() * 255);
+        let randomG = Math.floor(Math.random() * 255);
+        let randomB = Math.floor(Math.random() * 255);
         
         //Make grid boxes change color when hovered
         grid.addEventListener('mouseover',() => {
             console.log('hovered')
-            grid.style.backgroundColor = 'red';
+            grid.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
         }); 
     }   
 }
